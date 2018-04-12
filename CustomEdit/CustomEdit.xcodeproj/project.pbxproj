@@ -7,25 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76AEF461C55FB9D57BA65637 /* libPods-CustomEdit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6047D59D1862D0BC4CBA09DD /* libPods-CustomEdit.a */; };
 		AF7F9470207F523E00D73A61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7F945F207F523E00D73A61 /* LaunchScreen.storyboard */; };
 		AF7F9471207F523E00D73A61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7F9461207F523E00D73A61 /* Main.storyboard */; };
 		AF7F9472207F523E00D73A61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7F9464207F523E00D73A61 /* Assets.xcassets */; };
-		AF7F9473207F523E00D73A61 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7F9468207F523E00D73A61 /* ViewController.m */; };
 		AF7F9474207F523E00D73A61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7F946B207F523E00D73A61 /* main.m */; };
 		AF7F9475207F523E00D73A61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7F946E207F523E00D73A61 /* AppDelegate.m */; };
+		AF7F9482207F568C00D73A61 /* CARootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7F947F207F568C00D73A61 /* CARootViewController.m */; };
+		AF7F9485207F56C800D73A61 /* CARootView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7F9484207F56C800D73A61 /* CARootView.m */; };
+		AF7F9489207F581800D73A61 /* CARootViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7F9488207F581800D73A61 /* CARootViewModel.m */; };
+		AF7F948D207F5D8000D73A61 /* CARootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7F948C207F5D8000D73A61 /* CARootModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E7BAA2108009B2854C70EA2 /* Pods-CustomEdit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomEdit.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomEdit/Pods-CustomEdit.release.xcconfig"; sourceTree = "<group>"; };
+		6047D59D1862D0BC4CBA09DD /* libPods-CustomEdit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CustomEdit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BD3CE0D744C1578B2732F0A /* Pods-CustomEdit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomEdit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomEdit/Pods-CustomEdit.debug.xcconfig"; sourceTree = "<group>"; };
 		AF7F9445207F51C200D73A61 /* CustomEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomEdit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7F9460207F523E00D73A61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF7F9462207F523E00D73A61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF7F9464207F523E00D73A61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AF7F9468207F523E00D73A61 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		AF7F9469207F523E00D73A61 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AF7F946B207F523E00D73A61 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AF7F946D207F523E00D73A61 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF7F946E207F523E00D73A61 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AF7F947C207F544500D73A61 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CustomEdit/Info.plist; sourceTree = SOURCE_ROOT; };
+		AF7F947F207F568C00D73A61 /* CARootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARootViewController.m; sourceTree = "<group>"; };
+		AF7F9480207F568C00D73A61 /* CARootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARootViewController.h; sourceTree = "<group>"; };
+		AF7F9483207F56C800D73A61 /* CARootView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CARootView.h; sourceTree = "<group>"; };
+		AF7F9484207F56C800D73A61 /* CARootView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CARootView.m; sourceTree = "<group>"; };
+		AF7F9487207F581800D73A61 /* CARootViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CARootViewModel.h; sourceTree = "<group>"; };
+		AF7F9488207F581800D73A61 /* CARootViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CARootViewModel.m; sourceTree = "<group>"; };
+		AF7F948B207F5D8000D73A61 /* CARootModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CARootModel.h; sourceTree = "<group>"; };
+		AF7F948C207F5D8000D73A61 /* CARootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CARootModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +46,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76AEF461C55FB9D57BA65637 /* libPods-CustomEdit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		88FE14E5CC62BB2AC0832BF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6047D59D1862D0BC4CBA09DD /* libPods-CustomEdit.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AF7F943C207F51C200D73A61 = {
 			isa = PBXGroup;
 			children = (
 				AF7F9447207F51C200D73A61 /* CustomEdit */,
 				AF7F9446207F51C200D73A61 /* Products */,
+				D214D8D42957934C4AA29FF1 /* Pods */,
+				88FE14E5CC62BB2AC0832BF1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,8 +126,10 @@
 		AF7F9467207F523E00D73A61 /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				AF7F9469207F523E00D73A61 /* ViewController.h */,
-				AF7F9468207F523E00D73A61 /* ViewController.m */,
+				AF7F948A207F5D7300D73A61 /* Model */,
+				AF7F9481207F568C00D73A61 /* View */,
+				AF7F9486207F580500D73A61 /* ViewModel */,
+				AF7F947E207F568C00D73A61 /* ViewController */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -127,6 +153,51 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
+		AF7F947E207F568C00D73A61 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF7F9480207F568C00D73A61 /* CARootViewController.h */,
+				AF7F947F207F568C00D73A61 /* CARootViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		AF7F9481207F568C00D73A61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF7F9483207F56C800D73A61 /* CARootView.h */,
+				AF7F9484207F56C800D73A61 /* CARootView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF7F9486207F580500D73A61 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AF7F9487207F581800D73A61 /* CARootViewModel.h */,
+				AF7F9488207F581800D73A61 /* CARootViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AF7F948A207F5D7300D73A61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF7F948B207F5D8000D73A61 /* CARootModel.h */,
+				AF7F948C207F5D8000D73A61 /* CARootModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D214D8D42957934C4AA29FF1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6BD3CE0D744C1578B2732F0A /* Pods-CustomEdit.debug.xcconfig */,
+				2E7BAA2108009B2854C70EA2 /* Pods-CustomEdit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +205,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF7F945B207F51C400D73A61 /* Build configuration list for PBXNativeTarget "CustomEdit" */;
 			buildPhases = (
+				6FB15352C71ACF303A3AA056 /* [CP] Check Pods Manifest.lock */,
 				AF7F9441207F51C200D73A61 /* Sources */,
 				AF7F9442207F51C200D73A61 /* Frameworks */,
 				AF7F9443207F51C200D73A61 /* Resources */,
+				C1B2D369045555F2C40318D5 /* [CP] Embed Pods Frameworks */,
+				822251E9A77FF03E23341D81 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,13 +266,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6FB15352C71ACF303A3AA056 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CustomEdit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		822251E9A77FF03E23341D81 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CustomEdit/Pods-CustomEdit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1B2D369045555F2C40318D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CustomEdit/Pods-CustomEdit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AF7F9441207F51C200D73A61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AF7F9474207F523E00D73A61 /* main.m in Sources */,
-				AF7F9473207F523E00D73A61 /* ViewController.m in Sources */,
+				AF7F948D207F5D8000D73A61 /* CARootModel.m in Sources */,
+				AF7F9482207F568C00D73A61 /* CARootViewController.m in Sources */,
+				AF7F9489207F581800D73A61 /* CARootViewModel.m in Sources */,
+				AF7F9485207F56C800D73A61 /* CARootView.m in Sources */,
 				AF7F9475207F523E00D73A61 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +465,7 @@
 		};
 		AF7F945C207F51C400D73A61 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BD3CE0D744C1578B2732F0A /* Pods-CustomEdit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -354,6 +483,7 @@
 		};
 		AF7F945D207F51C400D73A61 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E7BAA2108009B2854C70EA2 /* Pods-CustomEdit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

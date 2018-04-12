@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "CARootViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    ViewController * rootVC = [[ViewController alloc] init];
+    CARootViewController * rootVC = [[CARootViewController alloc] init];
     UINavigationController * rootNavigationVC = [[UINavigationController alloc] initWithRootViewController:rootVC];
     
     CGRect windowRect = [UIScreen mainScreen].bounds;
