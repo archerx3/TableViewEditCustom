@@ -260,20 +260,60 @@
 {
     UISwipeActionsConfiguration * leadingConfiguration = nil;
     
+    NSMutableArray * actions = [NSMutableArray array];
+    
+    UIContextualAction * normalAction = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleNormal
+                                                                                title:@"Normal"
+                                                                              handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
+                                                                                    
+                                                                                }];
+    normalAction.backgroundColor = [UIColor greenColor];
+    [actions addObject:normalAction];
+    
+    UIContextualAction * destuctiveAction = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleDestructive
+                                                                                    title:@"Destructive"
+                                                                                  handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
+                                                                                      
+                                                                                  }];
+    [destuctiveAction setBackgroundColor:[UIColor blueColor]];
+    [actions addObject:destuctiveAction];
+    
+    leadingConfiguration = [UISwipeActionsConfiguration configurationWithActions:actions];
+    
     return leadingConfiguration;
 }
 
 - (nullable UISwipeActionsConfiguration *)tableView:(UITableView *)tableView trailingSwipeActionsConfigurationForRowAtIndexPath:(NSIndexPath *)indexPath API_AVAILABLE(ios(11.0))
 {
-    UISwipeActionsConfiguration * leadingConfiguration = nil;
+    UISwipeActionsConfiguration * trailingConfiguration = nil;
     
-    return leadingConfiguration;
+    NSMutableArray * actions = [NSMutableArray array];
+    
+    UIContextualAction * normalAction = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleNormal
+                                                                                title:@"Normal"
+                                                                              handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
+                                                                                  
+                                                                              }];
+    normalAction.backgroundColor = [UIColor greenColor];
+    [actions addObject:normalAction];
+    
+    UIContextualAction * destuctiveAction = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleDestructive
+                                                                                    title:@"Destructive"
+                                                                                  handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
+                                                                                      
+                                                                                  }];
+    [destuctiveAction setBackgroundColor:[UIColor blueColor]];
+    [actions addObject:destuctiveAction];
+    
+    trailingConfiguration = [UISwipeActionsConfiguration configurationWithActions:actions];
+    
+    return trailingConfiguration;
 }
 
 // Controls whether the background is indented while editing.  If not implemented, the default is YES.  This is unrelated to the indentation level below.  This method only applies to grouped style table views.
 - (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return YES;
+    return NO;
 }
 
 #pragma mark - Accessor
