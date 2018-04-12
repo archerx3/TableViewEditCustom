@@ -95,6 +95,9 @@
     UIBarButtonItem * leftButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
                                                                                       target:self
                                                                                       action:@selector(editButtonAction:)];
+    
+    leftButtonItem.enabled = !self.viewModel.isEditing;
+    
     self.navigationItem.leftBarButtonItem = leftButtonItem;
 }
 
@@ -103,6 +106,9 @@
     UIBarButtonItem * rightButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
                                                                                      target:self
                                                                                      action:@selector(doneButtonaction:)];
+    
+    rightButtonItem.enabled = self.viewModel.isEditing;
+    
     self.navigationItem.rightBarButtonItem = rightButtonItem;
 }
 
@@ -112,12 +118,26 @@
 #pragma mark - Actions
 - (void)editButtonAction:(id)sender
 {
+    self.navigationItem.leftBarButtonItem.enabled = NO;
+    self.navigationItem.rightBarButtonItem.enabled = YES;
     
+    self.viewModel.isEditing = YES;
+    
+    [self.contentView.tableView setEditing:YES animated:YES];
+    
+    [self reloadContentView];
 }
 
 - (void)doneButtonaction:(id)sender
 {
+    self.navigationItem.leftBarButtonItem.enabled = YES;
+    self.navigationItem.rightBarButtonItem.enabled = NO;
     
+    self.viewModel.isEditing = NO;
+    
+    [self.contentView.tableView setEditing:NO animated:YES];
+    
+    [self reloadContentView];
 }
 
 #pragma mark Reload View
@@ -171,7 +191,64 @@
     return cell;
 }
 
+#pragma mark Edit
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
 #pragma mark - UITableView Delegate
+#pragma mark Edit
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCellEditingStyle editingStyle = UITableViewCellEditingStyleNone;
+    
+    if (self.viewModel.isEditing)
+    {
+        editingStyle = UITableViewCellEditingStyleDelete;
+    }
+    
+    return editingStyle;
+}
+
+- (nullable NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString * titleFOrDeleteConfirmationButton = @"Sure";
+    
+    return titleFOrDeleteConfirmationButton;
+}
+
+#pragma mark NS_AVAILABLE_IOS(8_0)
+- (nullable NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return nil;
+}
+
+#pragma mark API_AVAILABLE(ios(11.0))
+- (nullable UISwipeActionsConfiguration *)tableView:(UITableView *)tableView leadingSwipeActionsConfigurationForRowAtIndexPath:(NSIndexPath *)indexPath API_AVAILABLE(ios(11.0))
+{
+    UISwipeActionsConfiguration * leadingConfiguration = nil;
+    
+    return leadingConfiguration;
+}
+
+- (nullable UISwipeActionsConfiguration *)tableView:(UITableView *)tableView trailingSwipeActionsConfigurationForRowAtIndexPath:(NSIndexPath *)indexPath API_AVAILABLE(ios(11.0))
+{
+    UISwipeActionsConfiguration * leadingConfiguration = nil;
+    
+    return leadingConfiguration;
+}
+
+// Controls whether the background is indented while editing.  If not implemented, the default is YES.  This is unrelated to the indentation level below.  This method only applies to grouped style table views.
+- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
 
 #pragma mark - Accessor
 - (CARootView *)contentView

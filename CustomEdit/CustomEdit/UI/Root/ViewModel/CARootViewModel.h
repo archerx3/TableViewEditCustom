@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@class CARootModel;
+#import "CARootModel.h"
 
 @interface CARootViewModel : NSObject
+
+@property (nonatomic, assign) BOOL isEditing;
 
 @property (nonatomic, copy) void (^contentUpdateBlock)(void);
 @property (nonatomic, copy) void (^dataUpdateBlock)(void);

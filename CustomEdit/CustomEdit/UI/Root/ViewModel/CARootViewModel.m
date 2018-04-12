@@ -8,8 +8,6 @@
 
 #import "CARootViewModel.h"
 
-#import "CARootModel.h"
-
 @interface CARootViewModel ()
 {
     NSMutableArray * mItems;
