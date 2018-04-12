@@ -9,8 +9,10 @@
 #import "CARootViewController.h"
 
 #import "CARootView.h"
+#import "CARootViewCell.h"
 
 #import "CARootViewModel.h"
+#import "CARootModel.h"
 
 @interface CARootViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -54,6 +56,9 @@
     
     self.title = @"Custom Table View Edit";
     
+    [self.contentView.tableView registerClass:[CARootViewCell class]
+                       forCellReuseIdentifier:CARootViewCellIdentifier];
+    
     __weak CARootViewController * weakSelf = self;
     
     self.viewModel.dataUpdateBlock = [^{
@@ -69,13 +74,56 @@
     } copy];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.viewModel reloadDataSource];
+    
+    [self configureNavigationBar];
+}
+
+#pragma mark - Navigation Bar
+- (void)configureNavigationBar
+{
+    [self configureNavigationBarLeftBarButtons];
+    [self configureNavigationBarRightBarButtons];
+}
+
+- (void)configureNavigationBarLeftBarButtons
+{
+    UIBarButtonItem * leftButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
+                                                                                      target:self
+                                                                                      action:@selector(editButtonAction:)];
+    self.navigationItem.leftBarButtonItem = leftButtonItem;
+}
+
+- (void)configureNavigationBarRightBarButtons
+{
+    UIBarButtonItem * rightButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                                                     target:self
+                                                                                     action:@selector(doneButtonaction:)];
+    self.navigationItem.rightBarButtonItem = rightButtonItem;
+}
+
 #pragma mark - Public Methods
 
 #pragma mark - Private Methods
+#pragma mark - Actions
+- (void)editButtonAction:(id)sender
+{
+    
+}
+
+- (void)doneButtonaction:(id)sender
+{
+    
+}
+
 #pragma mark Reload View
 - (void)reloadContentView
 {
-    
+    [self reloadTableView];
 }
 
 - (void)reloadTableView
@@ -104,6 +152,22 @@
 {
     UITableViewCell * cell = nil;
     
+    NSString * cellIdentifier = CARootViewCellIdentifier;
+    
+    cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if (!cell)
+    {
+        cell = [[CARootViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                     reuseIdentifier:cellIdentifier];
+    }
+    
+    NSInteger index = indexPath.row;
+    
+    CARootModel * model = [self.viewModel modelAtIndex:index];
+    
+    [(CARootViewCell *)cell setModel:model];
+    
     return cell;
 }
 
@@ -116,6 +180,9 @@
     {
         CGRect viewFrame = [UIScreen mainScreen].bounds;
         _contentView = [[CARootView alloc] initWithFrame:viewFrame];
+        
+        _contentView.tableView.dataSource = self;
+        _contentView.tableView.delegate = self;
     }
     
     return _contentView;

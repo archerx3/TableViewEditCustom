@@ -17,6 +17,7 @@
 		AF7F9485207F56C800D73A61 /* CARootView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7F9484207F56C800D73A61 /* CARootView.m */; };
 		AF7F9489207F581800D73A61 /* CARootViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7F9488207F581800D73A61 /* CARootViewModel.m */; };
 		AF7F948D207F5D8000D73A61 /* CARootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7F948C207F5D8000D73A61 /* CARootModel.m */; };
+		AF7F9491207F60AC00D73A61 /* CARootViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7F9490207F60AC00D73A61 /* CARootViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		AF7F9488207F581800D73A61 /* CARootViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CARootViewModel.m; sourceTree = "<group>"; };
 		AF7F948B207F5D8000D73A61 /* CARootModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CARootModel.h; sourceTree = "<group>"; };
 		AF7F948C207F5D8000D73A61 /* CARootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CARootModel.m; sourceTree = "<group>"; };
+		AF7F948F207F60AC00D73A61 /* CARootViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CARootViewCell.h; sourceTree = "<group>"; };
+		AF7F9490207F60AC00D73A61 /* CARootViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CARootViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +168,7 @@
 		AF7F9481207F568C00D73A61 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AF7F948E207F609000D73A61 /* ViewCell */,
 				AF7F9483207F56C800D73A61 /* CARootView.h */,
 				AF7F9484207F56C800D73A61 /* CARootView.m */,
 			);
@@ -187,6 +191,15 @@
 				AF7F948C207F5D8000D73A61 /* CARootModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		AF7F948E207F609000D73A61 /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AF7F948F207F60AC00D73A61 /* CARootViewCell.h */,
+				AF7F9490207F60AC00D73A61 /* CARootViewCell.m */,
+			);
+			path = ViewCell;
 			sourceTree = "<group>";
 		};
 		D214D8D42957934C4AA29FF1 /* Pods */ = {
@@ -323,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF7F9474207F523E00D73A61 /* main.m in Sources */,
+				AF7F9491207F60AC00D73A61 /* CARootViewCell.m in Sources */,
 				AF7F948D207F5D8000D73A61 /* CARootModel.m in Sources */,
 				AF7F9482207F568C00D73A61 /* CARootViewController.m in Sources */,
 				AF7F9489207F581800D73A61 /* CARootViewModel.m in Sources */,

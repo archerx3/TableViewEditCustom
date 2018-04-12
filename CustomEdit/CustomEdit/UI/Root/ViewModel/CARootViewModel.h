@@ -17,6 +17,8 @@
 
 @property (nonatomic, assign, readonly) NSInteger numberOfItems;
 
+- (void)reloadDataSource;
+
 - (CARootModel *)modelAtIndex:(NSInteger)index;
 
 @end

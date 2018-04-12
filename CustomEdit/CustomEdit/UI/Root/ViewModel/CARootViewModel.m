@@ -73,7 +73,13 @@
     return _numberOfItems;
 }
 
-#pragma mark - Private Method
+#pragma mark - Public Methods
+- (void)reloadDataSource
+{
+    [self sendDataUpdateSignl];
+}
+
+#pragma mark - Private Methods
 #pragma mark Send Signl
 - (void)sendContentUpdateSignl
 {
