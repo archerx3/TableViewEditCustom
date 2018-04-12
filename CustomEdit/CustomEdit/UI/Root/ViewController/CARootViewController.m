@@ -226,7 +226,33 @@
 #pragma mark NS_AVAILABLE_IOS(8_0)
 - (nullable NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return nil;
+    NSMutableArray * actions = [NSMutableArray array];
+    
+    UITableViewRowAction * normalRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal
+                                                                                title:@"Normal"
+                                                                              handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+                                                                                  
+                                                                              }];
+    
+    [actions addObject:normalRowAction];
+    
+    UITableViewRowAction * deleteRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive
+                                                                                title:@"Destrutive"
+                                                                              handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+                                                                                  
+                                                                              }];
+    
+    [actions addObject:deleteRowAction];
+    
+    UITableViewRowAction * defaultRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault
+                                                                                 title:@"Default"
+                                                                               handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+                                                                                   
+                                                                               }];
+    
+    [actions addObject:defaultRowAction];
+    
+    return actions;
 }
 
 #pragma mark API_AVAILABLE(ios(11.0))
