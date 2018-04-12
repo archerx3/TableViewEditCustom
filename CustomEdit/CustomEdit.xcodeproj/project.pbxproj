@@ -13,7 +13,6 @@
 		AF7F9473207F523E00D73A61 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7F9468207F523E00D73A61 /* ViewController.m */; };
 		AF7F9474207F523E00D73A61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7F946B207F523E00D73A61 /* main.m */; };
 		AF7F9475207F523E00D73A61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7F946E207F523E00D73A61 /* AppDelegate.m */; };
-		AF7F9476207F523E00D73A61 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF7F946F207F523E00D73A61 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +25,7 @@
 		AF7F946B207F523E00D73A61 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AF7F946D207F523E00D73A61 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF7F946E207F523E00D73A61 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AF7F946F207F523E00D73A61 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF7F947C207F544500D73A61 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CustomEdit/Info.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +102,8 @@
 		AF7F9467207F523E00D73A61 /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				AF7F9468207F523E00D73A61 /* ViewController.m */,
 				AF7F9469207F523E00D73A61 /* ViewController.h */,
+				AF7F9468207F523E00D73A61 /* ViewController.m */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -112,9 +111,9 @@
 		AF7F946A207F523E00D73A61 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				AF7F947C207F544500D73A61 /* Info.plist */,
 				AF7F946B207F523E00D73A61 /* main.m */,
 				AF7F946C207F523E00D73A61 /* AppDelegate */,
-				AF7F946F207F523E00D73A61 /* Info.plist */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -185,7 +184,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF7F9476207F523E00D73A61 /* Info.plist in Resources */,
 				AF7F9470207F523E00D73A61 /* LaunchScreen.storyboard in Resources */,
 				AF7F9472207F523E00D73A61 /* Assets.xcassets in Resources */,
 				AF7F9471207F523E00D73A61 /* Main.storyboard in Resources */,
